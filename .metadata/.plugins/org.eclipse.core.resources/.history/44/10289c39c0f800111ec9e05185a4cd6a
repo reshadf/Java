@@ -1,0 +1,9 @@
+package h02;
+
+import javax.swing.*;
+
+public class VerwisselPaneel extends JPanel implements ActionListener {
+	
+	
+
+}

@@ -1,0 +1,15 @@
+package h02;
+
+import javax.swing.*;
+
+public class Verwissel {
+	
+	JFrame venster = null;
+	
+	public Verwissel() {
+		
+	}
+	
+	public static void main(String[] args)
+
+}

@@ -1,0 +1,45 @@
+package h01a;
+
+import javax.swing.*;
+import java.awt.event.*;
+
+public class WachtlijstPaneel extends JPanel implements ActionListener {
+	private JButton knop;
+	private JTextField veld1;
+	private JTextField veld2;
+	private JTextField veld3;
+	private JTextField veld4;
+	private JTextArea textveld1;
+
+	/*
+	 * maak een form panel
+	 */
+
+	public WachtlijstPaneel() {
+		knop = new JButton("Schuif op");
+		knop.addActionListener(this);
+		veld1 = new JTextField(13);
+		veld2 = new JTextField(13);
+		veld3 = new JTextField(13);
+		veld4 = new JTextField(13);
+		textveld1 = new JTextArea(10, 13);
+		add(veld1);
+		add(knop);
+		add(veld2);
+		add(veld3);
+		add(veld4);
+		add(textveld1);
+	}
+	
+	/*
+	 * Hier wordt bepaald wat er gebeurt wanneer de button getriggerd wordt.
+	 */
+	public void actionPerformed(ActionEvent e) {
+		veld1.setText("test");
+		veld2.setText("test");
+		veld3.setText("test");
+		veld4.setText("test");
+		textveld1.setText("test");	
+	}
+
+}

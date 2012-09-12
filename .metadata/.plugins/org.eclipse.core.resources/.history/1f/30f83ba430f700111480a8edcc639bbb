@@ -1,0 +1,20 @@
+package h01;
+
+import javax.swing.*;
+
+public class Kopieerpaneel extends JPanel {
+	private JTextField veld1;
+	private JTextField veld2;
+	private JButton actieknop;
+	
+	public Kopieerpaneel() {
+		actieknop = new JButton(">Kopieer>");
+		veld1 = new JTextField(13);
+		veld2 = new JTextField(13);
+		add(veld1);
+		add(actieknop);
+		add(veld2);
+		
+	}
+	
+}

@@ -1,0 +1,23 @@
+package h01;
+
+import javax.swing.*;
+
+public class Kopieerpaneel extends JPanel implements ActionListener {
+	private JTextField veld1;
+	private JTextField veld2;
+	private JButton actieknop;
+	
+	public Kopieerpaneel() {
+		actieknop = new JButton(">Kopieer>");
+		veld1 = new JTextField(13);
+		veld2 = new JTextField(13);
+		veld1.setToolTipText("Vul hier uw text in");
+		veld2.setToolTipText("Hier komt een kopie van het linkerveld");
+		actieknop.setToolTipText("Kopieer veld");
+		add(veld1);
+		add(actieknop);
+		add(veld2);
+		
+	}
+	
+}

@@ -1,0 +1,19 @@
+package h02;
+
+import javax.swing.*;
+
+public class VerwisselPaneel extends JPanel implements ActionListener {
+	
+	private JTextField veld1, veld2;
+	private JButton knop;
+	
+	public VerwisselPaneel() {
+		
+		knop = new JButton("Verwissel");
+		knop.addActionListener(this);
+		veld1 = new JTextField(13);
+		
+	}
+	
+
+}

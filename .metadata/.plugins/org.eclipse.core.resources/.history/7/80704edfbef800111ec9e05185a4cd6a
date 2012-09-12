@@ -1,0 +1,11 @@
+package h02;
+
+import javax.swing.*;
+
+public class Veldwissel {
+	
+	JFrame venster = null;
+	
+	
+
+}
