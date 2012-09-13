@@ -1,0 +1,33 @@
+package h02a2;
+
+import java.awt.*;
+import javax.swing.*;
+import java.util.*;
+
+public class Eindtijd {
+	
+	JFrame venster = null;
+	
+	public Eindtijd() {
+		
+		JFrame venster = new JFrame();
+		venster.setSize(350, 200);
+		venster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		venster.setLocation(500, 100);
+		venster.add(new EindtijdPaneel());
+		venster().add(new javax.swing.JTextField(new java.text.SimpleDateFormat("EEE, dd MMMM yyyy").format(new java.util.Date()),15));  
+	    pack(); 
+		venster.setVisible(true);
+		
+	}
+	
+	public static void main(String[] args) {
+		Date date = new Date();   // given date
+		Calendar calendar = GregorianCalendar.getInstance(); // creates a new calendar instance
+		calendar.setTime(date);   // assigns calendar to given date 
+		calendar.get(Calendar.HOUR_OF_DAY); // gets hour in 24h format
+		calendar.get(Calendar.HOUR);        // gets hour in 12h format
+		new Eindtijd();
+	}
+
+}

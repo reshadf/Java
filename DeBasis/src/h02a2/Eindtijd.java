@@ -1,7 +1,6 @@
 package h02a2;
 
-import java.awt.*;
-
+//import java.awt.*;
 import javax.swing.*;
 
 public class Eindtijd {
@@ -14,7 +13,7 @@ public class Eindtijd {
 		venster.setSize(350, 200);
 		venster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		venster.setLocation(500, 100);
-		venster.add(new EindtijdPaneel());
+		venster.add(new EindtijdPaneel());  
 		venster.setVisible(true);
 		
 	}
