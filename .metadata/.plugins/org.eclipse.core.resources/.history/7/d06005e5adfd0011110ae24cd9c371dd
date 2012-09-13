@@ -1,0 +1,12 @@
+package h02a2;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class EindtijdPaneel extends JPanel implements ActionListener {
+	
+	private JTextField veldUur, veldMinuut, tijdsDuur;
+	private JButton bereken;
+	
+
+}

@@ -1,0 +1,17 @@
+package h02a2;
+
+import javax.swing.*;
+
+public class Eindtijd {
+	
+	JFrame venster = null;
+	
+	public Eindtijd() {
+		
+	}
+	
+	public void main(String[] args) {
+		
+	}
+
+}
