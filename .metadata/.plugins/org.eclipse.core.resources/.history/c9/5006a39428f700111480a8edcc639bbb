@@ -1,7 +1,0 @@
-package h01;
-
-import javax.swing.*;
-
-public class Kopieer extends JFrame {
-	
-}

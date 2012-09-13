@@ -66,7 +66,7 @@
           <tags>persp.newWizSC:org.eclipse.mylyn.tasks.ui.wizards.new.repository.task</tags>
           <tags>persp.viewSC:org.eclipse.wb.core.StructureView</tags>
           <tags>persp.viewSC:org.eclipse.wb.core.PaletteView</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_1eulEfRlEeGlvvfU6O-XnA" selectedElement="_1eulEvRlEeGlvvfU6O-XnA" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_1eulEfRlEeGlvvfU6O-XnA" selectedElement="_1evMJPRlEeGlvvfU6O-XnA" horizontal="true">
             <children xsi:type="basic:PartSashContainer" xmi:id="_1eulEvRlEeGlvvfU6O-XnA" containerData="2500" selectedElement="_1eulE_RlEeGlvvfU6O-XnA">
               <children xsi:type="basic:PartStack" xmi:id="_1eulE_RlEeGlvvfU6O-XnA" elementId="left" containerData="6000" selectedElement="_1eulFPRlEeGlvvfU6O-XnA">
                 <tags>newtablook</tags>
@@ -84,7 +84,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_1evMI_RlEeGlvvfU6O-XnA" elementId="org.eclipse.egit.ui.RepositoriesView" toBeRendered="false" ref="_1esv4PRlEeGlvvfU6O-XnA"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_1evMJPRlEeGlvvfU6O-XnA" containerData="7500" selectedElement="_1evMJfRlEeGlvvfU6O-XnA">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_1evMJPRlEeGlvvfU6O-XnA" containerData="7500" selectedElement="_1evMLvRlEeGlvvfU6O-XnA">
               <children xsi:type="basic:PartSashContainer" xmi:id="_1evMJfRlEeGlvvfU6O-XnA" containerData="7500" selectedElement="_1evMJvRlEeGlvvfU6O-XnA" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_1evMJvRlEeGlvvfU6O-XnA" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_1eMZkPRlEeGlvvfU6O-XnA"/>
                 <children xsi:type="basic:PartSashContainer" xmi:id="_1evMJ_RlEeGlvvfU6O-XnA" containerData="2500" selectedElement="_1evMKvRlEeGlvvfU6O-XnA">
@@ -145,7 +145,7 @@
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <children xsi:type="basic:Part" xmi:id="_MVh78Pi_EeG7Tr1Z7yzD9Q" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Verwissel.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="DeBasis/src/h02/Verwissel.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DeBasis/src/h02/Verwissel.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;298&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/DeBasis/src/h02/Verwissel.java&quot;/>&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>
