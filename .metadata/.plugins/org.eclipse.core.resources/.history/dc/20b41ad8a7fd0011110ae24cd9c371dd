@@ -1,10 +1,13 @@
 package h02;
 
+import h02a1.OptelPaneel;
+
 import javax.swing.*;
 
 public class Verwissel {
 	
 	JFrame venster = null;
+	JFrame venster2 = null;
 	
 	public Verwissel() {
 		JFrame venster = new JFrame();
@@ -12,7 +15,7 @@ public class Verwissel {
 		venster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		venster.setTitle("Verwissel opdracht hoofdstuk 2");
 		venster.setLocation(500, 500);
-		venster.add(new VerwisselPaneel());
+		venster.add(new OptelPaneel());
 		venster.setVisible(true);
 	}
 	

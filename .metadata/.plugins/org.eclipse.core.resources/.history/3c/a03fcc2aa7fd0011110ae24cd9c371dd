@@ -5,6 +5,7 @@ import javax.swing.*;
 public class Verwissel {
 	
 	JFrame venster = null;
+	JFrame venster2 = null;
 	
 	public Verwissel() {
 		JFrame venster = new JFrame();
@@ -12,12 +13,23 @@ public class Verwissel {
 		venster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		venster.setTitle("Verwissel opdracht hoofdstuk 2");
 		venster.setLocation(500, 500);
-		venster.add(new VerwisselPaneel());
+		venster.add(new OptelPaneel());
 		venster.setVisible(true);
+	}
+	
+	public OptelPaneel() {
+		JFrame venster2 = new JFrame();
+		venster2.setSize(500, 100);
+		venster2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		venster2.setTitle("Verwissel opdracht hoofdstuk 2");
+		venster2.setLocation(500, 500);
+		venster2.add(new VerwisselPaneel());
+		venster2.setVisible(true);
 	}
 	
 	public static void main(String[] args) {
 		new Verwissel();
+		new OptelPaneel();
 	}
 
 }
