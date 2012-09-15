@@ -27,7 +27,13 @@ public class Rechthoeken {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		new Rechthoeken();
+		try { 
+			new Rechthoeken();
+		}
+		
+		catch(RuntimeException e) {
+			JOptionPane.showMessageDialog(null, "error");
+		}
 
 	}
 
