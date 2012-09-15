@@ -1,7 +1,6 @@
 package h02a3;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Rechthoeken {
 
@@ -15,7 +14,6 @@ public class Rechthoeken {
 		venster.setLocation(500, 500);
 		venster.setTitle("Pixels in het venster");
 		venster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		venster.setLayout(new GridLayout(2, 2));
 		venster.add(new RechthoekenPaneel());
 		venster.setVisible(true);
 		
