@@ -23,8 +23,11 @@ public class ParapluPaneel extends JPanel implements ActionListener {
 		tekenknop = new JButton("Teken paraplu");
 		tekenknop.addActionListener(this);
 		kleurRVeld = new JTextField("13", 3);
+		kleurRVeld.addActionListener(this);
 		kleurGVeld = new JTextField("39", 3);
+		kleurGVeld.addActionListener(this);
 		kleurBVeld = new JTextField("130", 3);
+		kleurBVeld.addActionListener(this);
 		bepaalIngesteldeKleur(); // voor eerste keer tekenen
 		
 		add(new JLabel("Geef de waarden van RGB (0-255)"));
