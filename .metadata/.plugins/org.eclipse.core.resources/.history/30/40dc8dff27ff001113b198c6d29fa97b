@@ -1,0 +1,55 @@
+package h02a2;
+
+import javax.swing.*;
+import java.awt.event.*;
+
+/*
+ * eindtijd berekenen
+ */
+
+public class EindtijdPaneel extends JPanel implements ActionListener {
+	// declareer alle velden
+	private JLabel uur, minuut, tijd;
+	private JTextField veldUur, veldMinuut, tijdsDuur, eindTijd;
+	private JButton bereken;
+	
+	public EindtijdPaneel() {
+		
+		bereken = new JButton("Bereken eindtijd");
+		bereken.addActionListener(this);
+		veldUur = new JTextField(2);
+		veldMinuut = new JTextField(2);
+		tijdsDuur = new JTextField(2);
+		eindTijd = new JTextField(25);
+		uur = new JLabel("Begintijd uren");
+		minuut = new JLabel("minuten");
+		tijd = new JLabel("Tijdsduur in minuten");
+		add(uur);
+		add(veldUur);
+		add(veldMinuut);
+		add(minuut);
+		add(tijd);
+		add(tijdsDuur);
+		add(bereken);
+		add(eindTijd);
+	}
+	
+	public void Calculate() {
+		// berekening
+		int totaalTijd = (Integer.parseInt(veldUur.getText()) / 60) + Integer.parseInt(veldMinuut.getText()) + Integer.parseInt(tijdsDuur.getText());// alle minuten optellen
+		int uitvoer = totaalTijd % 60; // alle minuten naar uren omrekenen
+		String resultaat = "Eindtijd is: " + uitvoer; // alles in een string zetten
+		eindTijd.setText(resultaat);	
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+	// hier uitvoer	
+		//Calculate();
+		int hours = veldUur / 60; //since both are ints, you get an int
+		int minutes = t % 60;
+		System.out.printf("%d:%02d", hours, minutes);
+		
+		
+	}
+
+}
