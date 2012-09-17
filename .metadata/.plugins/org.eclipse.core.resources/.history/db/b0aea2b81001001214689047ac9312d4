@@ -1,0 +1,11 @@
+package h02a5;
+
+import java.awt.event.ActionEvent;
+
+public class Resizer {
+	
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

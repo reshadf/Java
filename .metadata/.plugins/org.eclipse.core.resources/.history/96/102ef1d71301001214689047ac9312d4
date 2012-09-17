@@ -1,0 +1,19 @@
+package h02a5;
+
+import java.awt.Color;
+import java.awt.event.*;
+
+public class Resizer implements ActionListener {
+	
+	protected Color balKleur; // kleur
+	
+	// afmetingen
+	
+	private int buitenLijn = 50;
+	private int binnenLijn = buitenLijn / 2;
+	
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+
+}

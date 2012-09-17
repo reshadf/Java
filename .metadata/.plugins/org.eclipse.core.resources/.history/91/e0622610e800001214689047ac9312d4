@@ -1,0 +1,17 @@
+package h02a5;
+
+public class Bal {
+
+	public Bal() {
+		
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		new Bal();
+	}
+
+}

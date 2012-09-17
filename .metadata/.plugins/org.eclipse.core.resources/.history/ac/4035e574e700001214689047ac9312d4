@@ -1,0 +1,17 @@
+package h02a5;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class BalPaneel extends JPanel {
+
+	private JTextField grootte;
+	private JButton teken;
+	private Color balKleur;
+	
+	
+	public BalPaneel() {
+		
+	}
+}

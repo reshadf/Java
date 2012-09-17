@@ -1,0 +1,27 @@
+package h02a5;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class BalPaneel extends JPanel implements ActionListener {
+
+	private JTextField grootte; // invoerbox veldgrootte
+	private JButton teken; // Teken button
+	private Color balKleur; // kleur
+	
+	// afmetingen
+	
+	private int buitenLijn = 50;
+	private int binnenLijn = buitenLijn / 2;
+	
+	
+	public BalPaneel() {
+		
+		teken = new JButton("teken bal");
+		teken.addActionListener(this);
+		grootte = new JTextField(3);
+		grootte.addActionListener(this);
+		
+	}
+}

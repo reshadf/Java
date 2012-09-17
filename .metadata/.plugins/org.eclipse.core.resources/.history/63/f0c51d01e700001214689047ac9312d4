@@ -1,0 +1,13 @@
+package h02a5;
+
+import javax.swing.*;
+
+public class BalPaneel {
+
+	private Color balKleur;
+	
+	
+	public BalPaneel() {
+		
+	}
+}

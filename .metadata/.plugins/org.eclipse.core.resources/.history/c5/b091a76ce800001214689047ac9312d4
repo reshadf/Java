@@ -1,0 +1,26 @@
+package h02a5;
+
+import javax.swing.*;
+
+public class Bal {
+	
+	JFrame venster = null;
+	
+	public Bal() {
+		
+		JFrame venster = new JFrame();
+		venster.setSize(300, 300);
+		venster.setLocation(500, 500);
+		venster.setTitle("Bal tekenen");
+		
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		new Bal();
+	}
+
+}

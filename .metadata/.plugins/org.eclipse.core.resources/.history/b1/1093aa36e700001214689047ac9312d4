@@ -1,0 +1,15 @@
+package h02a5;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class BalPaneel extends JPanel {
+
+	private Color balKleur;
+	
+	
+	public BalPaneel() {
+		
+	}
+}
