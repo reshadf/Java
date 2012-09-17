@@ -1,8 +1,0 @@
-package h02a5;
-
-public class BalPaneel {
-
-	public BalPaneel() {
-		
-	}
-}
