@@ -1,0 +1,23 @@
+package h02a5;
+
+import javax.swing.*;
+
+public class BalPaneel {
+
+//	public JTextField grootte; // invoerbox veldgrootte
+//	private JButton teken; // Teken button
+//	
+//	
+//	public BalPaneel() {
+//		
+//		teken = new JButton("teken bal");
+//		teken.addActionListener(new TekenBal());
+//		grootte = new JTextField(3);
+//		grootte.addActionListener(new TekenBal());
+//		
+//		add(grootte);
+//		add(teken);
+//	}
+	
+	
+}

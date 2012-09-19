@@ -1,21 +1,31 @@
 package h02a5;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class BalPaneel extends JPanel {
 
-	protected JTextField grootte; // invoerbox veldgrootte
-	private JButton teken; // Teken button
+//	public JTextField grootte; // invoerbox veldgrootte
+//	private JButton teken; // Teken button
+//	
+//	
+//	public BalPaneel() {
+//		
+//		teken = new JButton("teken bal");
+//		teken.addActionListener(new TekenBal());
+//		grootte = new JTextField(3);
+//		grootte.addActionListener(new TekenBal());
+//		
+//		add(grootte);
+//		add(teken);
+//	}
 	
+	TekenBal bal = new TekenBal();
 	
-	public BalPaneel() {
+	public void paintComponent(Graphics g) {
 		
-		teken = new JButton("teken bal");
-		teken.addActionListener(new Resizer());
-		grootte = new JTextField(3);
-		grootte.addActionListener(new Resizer());
-		
-		add(grootte);
-		add(teken);
+		super.paintComponent(g);
+		bal.tekenBal(g, 50, 50, 20);
 	}
+	
 }
