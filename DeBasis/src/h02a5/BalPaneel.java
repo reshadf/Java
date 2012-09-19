@@ -8,7 +8,7 @@ public class BalPaneel extends JPanel implements ActionListener {
 
 	public JTextField grootte; // invoerbox veldgrootte
 	private JButton teken; // Teken button
-	int getal = 10;
+	int balRadius = 150;
 	
 	public BalPaneel() {
 		
@@ -27,13 +27,16 @@ public class BalPaneel extends JPanel implements ActionListener {
 	public void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
-		bal.tekenBal(g, 100, 100, getal);
+		int horizontaal = getWidth() / 4;
+		int verticaal = 50;
+		
+		bal.tekenBal(g, horizontaal, verticaal, balRadius);
 	}
 	
 	public void actionPerformed(ActionEvent e) {
 		
 		int invoer = Integer.parseInt(grootte.getText());
-		getal = invoer ;
+		balRadius = invoer ;
 		repaint();
 		
 		

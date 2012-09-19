@@ -11,7 +11,7 @@ public class TekenBal {
 		g.fillOval(x, y, grootte, grootte);
 		g.setColor(Color.black);
 		g.drawOval(x + grootte / 4, y, grootte / 2, grootte);
-		
+		g.drawLine(x, y + grootte, grootte + x, grootte + y);
 	}
 
 }
