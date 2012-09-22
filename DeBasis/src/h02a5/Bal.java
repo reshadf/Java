@@ -13,7 +13,7 @@ public class Bal {
 		venster.setLocation(500, 500);
 		venster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		venster.setTitle("Bal tekenen");
-		venster.add(new BalPaneel());
+		venster.add(new BalPanel());
 		venster.setVisible(true);
 		
 	}
