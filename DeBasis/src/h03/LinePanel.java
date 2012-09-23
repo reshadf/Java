@@ -23,13 +23,13 @@ public class LinePanel extends JPanel implements ActionListener {
 	}
 	
 	DrawLines lines = new DrawLines();
-	
+	int input = Integer.parseInt(afstand.getText());
+	int positionY = getHeight() - input; // absolut positioning
+	int yPos = 0;
 	public void paintComponent(Graphics g) {
-		
+			
 		super.paintComponent(g);
-		int positionY = getHeight() - Integer.parseInt(afstand.getText()); // absolut positioning
 		
-		int yPos = 0;
 		
 		while(yPos <= positionY) {
 			
@@ -49,7 +49,7 @@ public class LinePanel extends JPanel implements ActionListener {
 		}
 		catch(NumberFormatException err) {
 			
-			JOptionPane.showMessageDialog(null, "something went wrong! heeft u wel een waarde opgegeven?");
+			JOptionPane.showMessageDialog(null, "something went wrong! heeft u wel een waarde opgegeven?", "Opnieuw", JOptionPane.CANCEL_OPTION);
 			
 		}
 		
