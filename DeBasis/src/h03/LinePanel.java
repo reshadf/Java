@@ -8,7 +8,7 @@ public class LinePanel extends JPanel implements ActionListener {
 	
 	private JTextField afstand;
 	private JButton teken;
-	int invoer = Integer.parseInt(afstand.getText());
+	int invoer = 1;
 
 	public LinePanel() {
 		
@@ -28,14 +28,14 @@ public class LinePanel extends JPanel implements ActionListener {
 	public void paintComponent(Graphics g) {
 			
 		super.paintComponent(g);
-		int positionY = getHeight() - invoer; // absolut positioning
 		
+		int positionY = getHeight() - invoer; // absolut positioning
 		int yPos = 0;
 		
 		while(yPos <= positionY) {
 			
 			lines.drawLines(g, 0, yPos, getWidth(), yPos);
-			yPos = yPos + Integer.parseInt(afstand.getText());
+			yPos = yPos + invoer;
 		}
 		
 	}
@@ -44,6 +44,7 @@ public class LinePanel extends JPanel implements ActionListener {
 		
 		try {
 			
+			invoer = Integer.parseInt(afstand.getText());
 			repaint();
 			
 			
