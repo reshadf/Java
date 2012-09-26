@@ -1,9 +1,12 @@
 package h01aWachtrij;
 
 import javax.swing.*;
+import javax.swing.event.CaretEvent;
+import javax.swing.event.CaretListener;
+
 import java.awt.event.*;
 
-public class WachtlijstPaneel extends JPanel implements ActionListener {
+public class WachtlijstPaneel extends JPanel implements ActionListener, CaretListener {
 	private JButton knop;
 	private JTextField veld1;
 	private JTextField veld2;
@@ -20,6 +23,8 @@ public class WachtlijstPaneel extends JPanel implements ActionListener {
 		knop = new JButton("Schuif op");
 		knop.addActionListener(this);
 		veld1 = new JTextField(13);
+		veld1.addActionListener(this);
+		veld1.addCaretListener(this);
 		veld2 = new JTextField(13);
 		veld3 = new JTextField(13);
 		veld4 = new JTextField(13);
@@ -55,5 +60,10 @@ public class WachtlijstPaneel extends JPanel implements ActionListener {
 			veld2.setText( veld1.getText() );
 			veld1.setText("");
 	    }
+	}
+
+	@Override
+	public void caretUpdate(CaretEvent arg0) {
+		
 	}
 }
