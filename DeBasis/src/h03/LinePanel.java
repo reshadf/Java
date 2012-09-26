@@ -44,8 +44,7 @@ public class LinePanel extends JPanel implements ActionListener {
 		
 		try {
 			
-			repaint();
-			
+			repaint();			
 			
 		}
 		catch(NumberFormatException err) {
