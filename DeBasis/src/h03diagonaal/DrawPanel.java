@@ -30,10 +30,22 @@ public class DrawPanel extends JPanel implements ActionListener {
 		
 		int xPos = 0;
 		int yPos = getHeight() - (getHeight() / 2);
-		
+		int rC = 10;
+		int gC = 10;
+		int bC = 255;
+		Color kleur = new Color(rC, gC, bC);
 		for(int aantalLines = 0; aantalLines < 20; aantalLines++ ) {
+
 			  line.drawLines(g, xPos,       yPos +        ((aantalLines + 1) * value), 
 			                    getWidth(), getHeight() - ((aantalLines + 1) * value) );
+			  this.setForeground(kleur);
+			  if(rC < 255) {
+				  rC++;
+			  }
+			  if(gC < 255) {
+				gC++;  
+			  }
+			  
 			}
 		
 	}
