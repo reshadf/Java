@@ -30,14 +30,11 @@ public class DrawPanel extends JPanel implements ActionListener {
 		
 		int xPos = 0;
 		int yPos = getHeight() - (getHeight() / 2);
-		int localValue = value;
 		
-		for(int aantalLines = 0; aantalLines < 10; aantalLines++ ) {
-			line.drawLines(g, xPos, yPos + localValue, getWidth(), getHeight() - localValue );
-			localValue += localValue;
-			System.out.println(localValue);
-			System.out.println(aantalLines);
-		}
+		for(int aantalLines = 0; aantalLines < 20; aantalLines++ ) {
+			  line.drawLines(g, xPos,       yPos +        ((aantalLines + 1) * value), 
+			                    getWidth(), getHeight() - ((aantalLines + 1) * value) );
+			}
 		
 	}
 	
