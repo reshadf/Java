@@ -8,7 +8,6 @@ public class DrawPanel extends JPanel implements ActionListener {
 	
 	private JTextField tussenRuimte;
 	private JButton tekenKnop;
-	int value;
 
 	public DrawPanel() {
 		
@@ -24,7 +23,7 @@ public class DrawPanel extends JPanel implements ActionListener {
 	}
 	
 	DrawLines line = new DrawLines();
-	
+	int value = 0;
 	public void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
@@ -33,8 +32,7 @@ public class DrawPanel extends JPanel implements ActionListener {
 		int yPos = getHeight() - (getHeight() / 2);
 		
 		if(tussenRuimte.getText() != null) {
-			
-			//value = 0;
+	
 			for(int aantalLines = 0; aantalLines <= 10; aantalLines++ ) {
 				line.drawLines(g, xPos, yPos + value, getWidth(), getHeight() - value );
 				value += value;
