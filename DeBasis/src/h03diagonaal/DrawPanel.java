@@ -23,7 +23,7 @@ public class DrawPanel extends JPanel implements ActionListener {
 	}
 	
 	DrawLines line = new DrawLines();
-	int value = 0;
+	int value = 8;
 	public void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
