@@ -11,7 +11,7 @@ public class BalFrame {
 		
 		JFrame frame = new JFrame();
 		frame.setLocation(500, 400);
-		frame.setSize(1000, 500);
+		frame.setSize(500, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Verplaatsbare bal");
 		frame.setBackground(Color.white);
