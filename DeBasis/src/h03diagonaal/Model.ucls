@@ -2,7 +2,7 @@
   associations="true" dependencies="false" nesting-relationships="true">  
   <class id="1" corner="BOTTOM_RIGHT" language="java" name="h03diagonaal.Main" project="DeBasis" 
     file="/DeBasis/src/h03diagonaal/Main.java" binary="false">    
-    <position height="94" width="123" x="229" y="245"/>    
+    <position height="-1" width="-1" x="104" y="81"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -10,7 +10,7 @@
   </class>  
   <class id="2" corner="BOTTOM_RIGHT" language="java" name="h03diagonaal.DrawPanel" project="DeBasis" 
     file="/DeBasis/src/h03diagonaal/DrawPanel.java" binary="false">    
-    <position height="162" width="213" x="392" y="245"/>    
+    <position height="-1" width="-1" x="312" y="115"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -18,7 +18,7 @@
   </class>  
   <class id="3" corner="BOTTOM_RIGHT" language="java" name="h03diagonaal.DrawLines" project="DeBasis" 
     file="/DeBasis/src/h03diagonaal/DrawLines.java" binary="false">    
-    <position height="94" width="228" x="392" y="447"/>    
+    <position height="-1" width="-1" x="310" y="298"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -26,7 +26,7 @@
   </class>  
   <class id="4" corner="BOTTOM_RIGHT" language="java" name="h03diagonaal.Frame" project="DeBasis" 
     file="/DeBasis/src/h03diagonaal/Frame.java" binary="false">    
-    <position height="94" width="102" x="645" y="245"/>    
+    <position height="-1" width="-1" x="500" y="96"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
