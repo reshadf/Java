@@ -21,6 +21,7 @@ public class EindtijdPaneel extends JPanel implements ActionListener {
 		veldMinuut = new JTextField(2);
 		tijdsDuur = new JTextField(2);
 		eindTijd = new JTextField(25);
+		eindTijd.setEditable(false);
 		uur = new JLabel("Begintijd uren");
 		minuut = new JLabel("minuten");
 		tijd = new JLabel("Tijdsduur in minuten");

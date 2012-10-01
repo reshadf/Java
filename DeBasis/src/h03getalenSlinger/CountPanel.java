@@ -33,6 +33,7 @@ public class CountPanel extends JPanel implements ActionListener {
 	
 	public void actionPerformed (ActionEvent e) {
 		int value = Integer.parseInt(invoerVeld.getText());
+		berekening.setText("");
 		
 		do {
 			if(value % 2 == 0) {
