@@ -21,8 +21,6 @@ public class Bal extends JPanel implements ActionListener, KeyListener {
 		
 		goLeft = new JButton("Naar links");
 		goLeft.addActionListener(this);
-		this.addKeyListener(this);
-		this.getInputMap().put(KeyStroke.getKeyStroke("SPACE"), "pressed");
 		goRight = new JButton("Naar rechts");
 		goRight.addActionListener(this);
 		sizeMinus = new JButton("-");
@@ -121,5 +119,4 @@ public class Bal extends JPanel implements ActionListener, KeyListener {
 		repaint();
 		
 	}
-
 }
