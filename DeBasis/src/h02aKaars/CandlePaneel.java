@@ -10,7 +10,8 @@ public class CandlePaneel extends JPanel implements ActionListener {
 	int height = 250;
 	int height2 = 250;
 	public JTextField textfield;
-	private JButton burn;
+	private JButton burn, toggle1, toggle2;
+	private boolean aan1, aan2;
 	
 	public CandlePaneel() {
 		
@@ -18,16 +19,23 @@ public class CandlePaneel extends JPanel implements ActionListener {
 		burn.addActionListener(this);
 		textfield = new JTextField(3);
 		textfield.addActionListener(this);
+		toggle1 = new JButton("1 Aan/Uit");
+		toggle1.addActionListener(this);
+		toggle2 = new JButton("1 Aan/Uit");
+		toggle2.addActionListener(this);
 		
 		add(new JLabel("vul een cijfer tussen 0 en 15 in"));
 		add(textfield);
 		add(burn);
+		add(toggle1);
+		add(toggle2);
 		
 	}
 	
 	// define variabel Candle aan new DrawCandle();
 	DrawCandle candle = new DrawCandle();
 	DrawCandle candle2 = new DrawCandle();
+	
 	
 	@Override
 	public void paintComponent(Graphics g) {
@@ -37,9 +45,9 @@ public class CandlePaneel extends JPanel implements ActionListener {
 		int position2Y = getHeight() - (height2 + 10);
 		
 		// teken een kaars met vlam als hoogte > 15 anders teken een kaars zonder vlam
-		if (height > 15) {
+		if (height > 15 && aan1 == true) {
 			
-			candle.drawCandle(g, 20, positionY, height);
+			candle.drawCandle(g, 20, positionY, height, aan1);
 			
 		}
 		else {
@@ -47,9 +55,9 @@ public class CandlePaneel extends JPanel implements ActionListener {
 			candle.drawCandleBurned(g, 20, positionY, height);
 			
 		}
-		if (height2 > 15) {
+		if (height2 > 15 && aan2 == true) {
 			
-			candle2.drawCandle(g, 120, position2Y, height2);
+			candle2.drawCandle(g, 120, position2Y, height2, aan2);
 		}
 		else {
 			
@@ -58,21 +66,43 @@ public class CandlePaneel extends JPanel implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
+		
+		if( e.getSource() == toggle1 ) {
+			
+			aan1 = !aan1;
+			
+			System.out.println(aan1);
+			repaint();
+		}
+		
+		if( e.getSource() == toggle2 ) {
+			
+			aan2 = !aan2;
+			
+			System.out.println(aan2);
+			repaint();
+			
+		}
 
 		try {
 			// controleer of de ingevulde waarde tussen de 0 en de 15 is
-			if(Integer.parseInt(textfield.getText()) < 16 && Integer.parseInt(textfield.getText()) > 0) {
+			if( e.getSource() == burn && Integer.parseInt(textfield.getText()) < 16 && Integer.parseInt(textfield.getText()) > 0) {
 				// brand kaars
-				if( height > 15 ) {
+				if( height > 15 && aan1 == true) {
 					
 					int aantal = Integer.parseInt(textfield.getText());
 					height -= aantal;
-					repaint();
 				}
-				else {
-					
-					JOptionPane.showMessageDialog(null, "Oeps: Uw kaars is opgebrand!"); // alertbox melding
+
+				
+				if( height2 > 15 && aan2 == true) {
+					int aantal = Integer.parseInt(textfield.getText());
+					height2 -= aantal;
 				}
+				
+				// opnieuw tekenen
+				repaint();
+				
 			}
 			else {
 				

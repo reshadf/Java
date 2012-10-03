@@ -9,7 +9,7 @@ public class Candle {
 	public Candle() {
 		
 		JFrame venster = new JFrame();
-		venster.setSize(200,400);
+		venster.setSize(300,400);
 		venster.setLocation(500,500);
 		venster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		venster.setTitle("Candle");

@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class DrawCandle {
 	
-	public void drawCandle(Graphics g, int x, int y, int lengte) {
+	public void drawCandle(Graphics g, int x, int y, int lengte, boolean aan) {
 		
 		g.setColor(Color.white);
 		g.drawRect(x, y, 50, lengte);
