@@ -4,24 +4,30 @@ public class BerekenDag {
 	
 	public String maakResultaattekst(int dag, int maand, int jaar) {
 		
-		String resultaat = "De dag na " +
-		dag + "-" + maand + "-" + jaar + " is ";
+		if(bestaanbareDatum(dag, maand, jaar)) {
 		
-		dag++;
-		if( dag > aantalDagenInMaand(maand, jaar)) {
+			String resultaat = "De dag na " +
+			dag + "-" + maand + "-" + jaar + " is ";
 			
-			dag = 1;
-			maand++;
-			
-			if(maand > 12) {
+			dag++;
+			if( dag > aantalDagenInMaand(maand, jaar)) {
 				
-				maand = 1;
-				jaar++;
+				dag = 1;
+				maand++;
+				
+				if(maand > 12) {
+					
+					maand = 1;
+					jaar++;
+					
+				}
 				
 			}
-			
+			return resultaat + dag + "-" + maand + "-" + jaar;
 		}
-		return resultaat + dag + "-" + maand + "-" + jaar;
+		else {
+			return "ongeldige datum";
+		}
 	}
 	
 	public int aantalDagenInMaand( int maand, int jaar ) {
@@ -53,6 +59,12 @@ public class BerekenDag {
 	public boolean isSchrikkeljaar(int jaartal) {
 		
 		return ((jaartal % 4 == 0) && (jaartal % 100 != 0)) || (jaartal % 400 == 0);
+		
+	}
+	
+	public boolean bestaanbareDatum(int dag, int maand, int jaar) {
+		
+		return ((jaar >= 1582) && (maand > 0) && (maand < 13) && (dag > 0) && (dag < 32));
 		
 	}
 
