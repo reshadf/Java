@@ -16,6 +16,7 @@ public class VolgendeDag {
 		frame.setTitle("Bepaal volgende dag");
 		frame.setBackground(Color.white);
 		frame.setLocation(600, 400);
+		frame.add(new VolgendeDagPaneel());
 		frame.setVisible(true);
 		
 	}
