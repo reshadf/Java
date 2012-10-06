@@ -11,7 +11,7 @@ public class CandlePanel extends JPanel implements ActionListener {
 	private int lengte = 500;
 	private int x;
 	private int y;
-	private int speed = 10;
+	private int speed = 1;
 	private final int WACHTTIJD = 100; // wachttijd voor de timer
 	
 	public CandlePanel() {
@@ -54,12 +54,11 @@ public class CandlePanel extends JPanel implements ActionListener {
 	
 	public int getCandleSize() {
 		
-		do {
-			lengte -= speed;
-		}
-		while(lengte > 15);
-		
-		return lengte;
+	    if(lengte > 15) {
+	        lengte -= speed;
+	    }
+
+	    return lengte;
 	}
 
 	@Override
