@@ -13,10 +13,10 @@ public class CandlePanel extends JPanel implements ActionListener {
 	private int y;
 	private int speed = 1;
 	private final int WACHTTIJD = 100; // wachttijd voor de timer
+	javax.swing.Timer autoburn = new javax.swing.Timer(WACHTTIJD,this);
 	
 	public CandlePanel() {
 		
-		javax.swing.Timer autoburn = new javax.swing.Timer(WACHTTIJD,this);
 		
 		autoburn.start();
 		
@@ -46,7 +46,7 @@ public class CandlePanel extends JPanel implements ActionListener {
 			
 			x = x + 70;
 			
-			System.out.println(lengte);
+		//	System.out.println(lengte);
 			
 		}
 		
@@ -56,6 +56,10 @@ public class CandlePanel extends JPanel implements ActionListener {
 		
 	    if(lengte > 15) {
 	        lengte -= speed;
+	    }
+	    else {
+	    	
+	    	autoburn.stop();
 	    }
 
 	    return lengte;
