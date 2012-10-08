@@ -4,9 +4,7 @@ import java.awt.*;
 
 public class DrawPacMan {
 
-	public void drawPacMan(Graphics g, int x, int y, Color color) {
-		
-		int radius = 75;
+	public void drawPacMan(Graphics g, int x, int y, int radius, Color color) {
 		
 		g.setColor(color); // set color
 		g.fillOval(x, y, radius, radius); // paint
@@ -14,14 +12,15 @@ public class DrawPacMan {
 		g.drawOval(x, y, radius, radius); // outline
 		// mouth?
 		
-		g.drawPolygon(int[] xPoints, int[] yPoints, nPoints)
+		//g.drawPolygon(int[] xPoints, int[] yPoints, nPoints)
 		
 	}
 	
-	public void drawGhost(Graphics g, int x, int y, Color color) {
+	public void drawGhost(Graphics g, int x, int y, int radius, Color color) {
 		
 		g.setColor(color); // color
-		// here goes shape
+		g.fillRect(x, y, radius, radius);
+		g.drawRect(x, y, radius, radius);
 		
 	}
 

@@ -21,13 +21,11 @@ public class PacManStart {
 		frame.setTitle("PacMan");
 		frame.setLocation(100, 100);
 		
-		PacMan pacman;
-		pacman = new PacMan();
+		PacMan pacman = new PacMan();;
 		frame.add(pacman, BorderLayout.CENTER);
 		
-		PacManBediening bedieningspaneel;
-		bedieningspaneel = new PacManBediening(pacman);
-		frame.add(bedieningpaneel, BorderLayout.SOUTH);
+		PacManBediening bedieninsgpaneel = new PacManBediening(pacman);
+		frame.add(bedieninsgpaneel, BorderLayout.SOUTH);
 		
 		frame.setVisible(true);
 		
