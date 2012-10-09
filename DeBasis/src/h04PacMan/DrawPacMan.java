@@ -20,7 +20,7 @@ public class DrawPacMan {
 		
 		// pacman eyes
 		g.setColor(Color.black);
-		g.fillOval(x + 15 ,y + 5 , radius / 4, radius / 4); // drawing eye;
+		g.fillOval(x + 20 ,y + 15 , radius / 5, radius / 5); // drawing eye;
 
 		
 	}
@@ -34,6 +34,10 @@ public class DrawPacMan {
 		// ghost body
 		g.setColor(color);
 		g.fillArc (x, y, radius, radius, 0, 180); 
+		
+		g.setColor(color);
+		g.drawRect(x, y + radius / 2, radius, radius / 2);
+		g.fillRect(x, y + radius / 2, radius, radius / 2);
 
 		// ghost eyes
 		g.setColor(color.black);
