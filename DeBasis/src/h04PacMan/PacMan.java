@@ -66,10 +66,10 @@ public class PacMan extends JPanel implements ActionListener {
 		
 		besturing = waarde;
 		
-		if(waarde == 0) {
+		if(waarde == 1) {
 			setVerPlaats( getVerPlaats() + richtingEnSnelheid);
 		}
-		else {
+		else if(waarde == 0){
 			setHorPlaats( getHorPlaats() + richtingEnSnelheid);
 		}
 	}

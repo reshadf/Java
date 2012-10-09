@@ -6,16 +6,11 @@ public class DrawPacMan {
 
 	public void drawPacMan(Graphics g, int x, int y, int radius, Color color) {
 		
-		g.setColor(color); // set color
-		g.fillOval(x, y, radius, radius); // paint
-		g.setColor(Color.black);
-		g.drawOval(x, y, radius, radius); // outline
-		// mouth?
-		
-		//g.drawPolygon(int[] xPoints, int[] yPoints, nPoints)
+		g.setColor(color);
+		g.fillArc(x,y,radius,radius,30,300);
 		
 	}
-	
+
 	public void drawGhost(Graphics g, int x, int y, int radius, Color color) {
 		
 		g.setColor(color); // color
