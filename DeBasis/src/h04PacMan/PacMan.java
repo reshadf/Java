@@ -6,6 +6,7 @@ package h04PacMan;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.geom.*;
 
 import javax.swing.*;
 
@@ -83,7 +84,7 @@ public class PacMan extends JPanel implements ActionListener {
 	//movement
 	public void setBesturing(int besturing) {
 		
-		besturing = waarde;
+		waarde = besturing;
 		
 		if(waarde == 0) {
 			setVerPlaats( getVerPlaats() + richtingEnSnelheid);
@@ -105,6 +106,27 @@ public class PacMan extends JPanel implements ActionListener {
 	DrawPacMan pacman = new DrawPacMan();
 	DrawPacMan ghost1 = new DrawPacMan();
 	DrawPacMan ghost2 = new DrawPacMan();
+	
+	AffineTransform pac = new AffineTransform();
+	
+	public void setPacManView(int waarde) {
+		// set the view of pacman
+		switch (waarde) {
+		case 0 :
+			// here one view of pacman
+			break;
+		case 1 :
+			// here one view of pacman
+			break;
+		case 2 :
+			// here one view of pacman
+			break;
+		case 3 :
+			// here one view of pacman
+			break;
+		
+		}
+	}
 	
 	public void paintComponent(Graphics g) {
 		
