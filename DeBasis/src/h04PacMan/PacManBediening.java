@@ -47,25 +47,25 @@ public class PacManBediening extends JPanel implements ActionListener {
 			pacman.setRichtingEnSnelheid( -10 );
 			pacman.setBesturing(0);
 			pacman.setView(180);
-			System.out.println("links");
+			//System.out.println("links");
 		}
 		else if(e.getSource() == rechts) {
 			pacman.setRichtingEnSnelheid( +10 );
 			pacman.setBesturing(0);
 			pacman.setView(0);
-			System.out.println("rechts");
+			//System.out.println("rechts");
 		}
 		else if(e.getSource() == boven) {
 			pacman.setRichtingEnSnelheid( -10);
 			pacman.setBesturing(1);
 			pacman.setView(90);
-			System.out.println("boven");
+			//System.out.println("boven");
 		}
 		else {
 			pacman.setRichtingEnSnelheid( +10);
 			pacman.setBesturing(1);
 			pacman.setView(270);
-			System.out.println("beneden");
+			//System.out.println("beneden");
 		}
 		
 		

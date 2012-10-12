@@ -16,7 +16,7 @@ public class DrawPacMan {
 		//pacman body
 		angle = (int) (20 * (Math.sin((x + y)*2*Math.PI/50) + 1)); 
 		g.setColor(color);
-		System.out.println(angle);
+		//System.out.println(angle);
 		g.fillArc(x, y, radius, radius, angle/2 + direction, 360-angle);
 		
 		// pacman eyes

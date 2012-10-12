@@ -18,6 +18,7 @@ public class PacMan extends JPanel implements ActionListener {
 	int diameter; //radius of pacman
 	int direction; // view of pacman
 	int waarde; //direction pacman is going
+	final int ghostSpeed = 5; // speed of ghost
 
 	public PacMan() {
 		
@@ -118,6 +119,9 @@ public class PacMan extends JPanel implements ActionListener {
 		return direction;
 	}
 	
+	int g1x = 0;
+	boolean g1r = true;
+	
 	public void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
@@ -126,13 +130,27 @@ public class PacMan extends JPanel implements ActionListener {
 		pacman.drawPacMan(g, getHorPlaats(), getVerPlaats(), diameter, getView(), Color.yellow);
 		
 		// ghosts movement
-		int g1x;
-		for(g1x = 0; g1x < 10; g1x++) {
+		if(g1r == true) {
 			
-			pacman.drawGhost(g, g1x, 40, diameter, Color.red);
+			g1x += ghostSpeed;
 			
 		}
-		pacman.drawGhost(g, 170, 70, diameter, Color.blue);
+		
+		if(g1r == false) {
+			
+			g1x -= ghostSpeed;
+			
+		}
+		
+		
+		if(g1x == 500 || g1x == 0) {
+			
+			g1r = !g1r;
+			
+		}
+		
+		System.out.println(g1r);
+		ghost1.drawGhost(g, g1x, 40, diameter, Color.red);
 		
 		
 	}
