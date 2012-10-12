@@ -6,7 +6,6 @@ package h04PacMan;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.awt.geom.*;
 
 import javax.swing.*;
 
@@ -16,8 +15,9 @@ public class PacMan extends JPanel implements ActionListener {
 	private int verticalePlaats = 150; // y location
 	private int richtingEnSnelheid = +10; // speed
 	private final int WACHTTIJD = 500; // DELAY
-	int diameter;
-	int waarde;
+	int diameter; //radius of pacman
+	int direction; // view of pacman
+	int waarde; //direction pacman is going
 
 	public PacMan() {
 		
@@ -87,10 +87,10 @@ public class PacMan extends JPanel implements ActionListener {
 		waarde = besturing;
 		
 		if(waarde == 0) {
-			setVerPlaats( getVerPlaats() + richtingEnSnelheid);
+			setHorPlaats( getHorPlaats() + richtingEnSnelheid);
 		}
 		else if(waarde == 1){
-			setHorPlaats( getHorPlaats() + richtingEnSnelheid);
+			setVerPlaats( getVerPlaats() + richtingEnSnelheid);
 		}
 	}
 
@@ -98,7 +98,7 @@ public class PacMan extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		setBesturing(waarde);
-		System.out.println(waarde);
+		//System.out.println(waarde);
 		repaint();
 		
 	}
@@ -107,33 +107,23 @@ public class PacMan extends JPanel implements ActionListener {
 	DrawPacMan ghost1 = new DrawPacMan();
 	DrawPacMan ghost2 = new DrawPacMan();
 	
-	AffineTransform pac = new AffineTransform();
-	
-	public void setPacManView(int waarde) {
-		// set the view of pacman
-		switch (waarde) {
-		case 0 :
-			// here one view of pacman
-			break;
-		case 1 :
-			// here one view of pacman
-			break;
-		case 2 :
-			// here one view of pacman
-			break;
-		case 3 :
-			// here one view of pacman
-			break;
+	public void setView(int view) {
 		
-		}
+		direction = view;
+		
+	}
+	
+	public int getView() {
+		
+		return direction;
 	}
 	
 	public void paintComponent(Graphics g) {
 		
 		super.paintComponent(g);
 		// pacman movement
-		diameter = 75;	
-		pacman.drawPacMan(g, getHorPlaats(), getVerPlaats(), diameter, Color.yellow);
+		diameter = 75;	 
+		pacman.drawPacMan(g, getHorPlaats(), getVerPlaats(), diameter, getView(), Color.yellow);
 		
 		// ghosts movement
 		int g1x;
