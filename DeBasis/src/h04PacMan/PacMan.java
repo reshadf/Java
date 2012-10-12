@@ -6,6 +6,7 @@ package h04PacMan;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 import javax.swing.*;
 
@@ -94,19 +95,6 @@ public class PacMan extends JPanel implements ActionListener {
 			setVerPlaats( getVerPlaats() + richtingEnSnelheid);
 		}
 	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		
-		setBesturing(waarde);
-		//System.out.println(waarde);
-		repaint();
-		
-	}
-	
-	DrawPacMan pacman = new DrawPacMan();
-	DrawPacMan ghost1 = new DrawPacMan();
-	DrawPacMan ghost2 = new DrawPacMan();
 	
 	public void setView(int view) {
 		
@@ -118,6 +106,18 @@ public class PacMan extends JPanel implements ActionListener {
 		
 		return direction;
 	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		setBesturing(waarde);
+		//System.out.println(waarde);
+		repaint();
+		
+	}
+	
+	DrawPacMan pacman = new DrawPacMan();
+	DrawGhost ghost = new DrawGhost();
 	
 	int g1x = 0;
 	boolean g1r = true;
@@ -126,32 +126,17 @@ public class PacMan extends JPanel implements ActionListener {
 		
 		super.paintComponent(g);
 		// pacman movement
-		diameter = 75;	 
+		diameter = 25;	 
 		pacman.drawPacMan(g, getHorPlaats(), getVerPlaats(), diameter, getView(), Color.yellow);
 		
 		// ghosts movement
-		if(g1r == true) {
-			
-			g1x += ghostSpeed;
-			
-		}
+		g1x += ghostSpeed * (g1r? 1 : -1);
 		
-		if(g1r == false) {
-			
-			g1x -= ghostSpeed;
-			
-		}
+		// check direction
+		if (g1x >= 500) { g1x = 500; g1r = false; }
+		else if (g1x <= 0) { g1x = 0; g1r = true; }
 		
-		
-		if(g1x == 500 || g1x == 0) {
-			
-			g1r = !g1r;
-			
-		}
-		
-		System.out.println(g1r);
-		ghost1.drawGhost(g, g1x, 40, diameter, Color.red);
-		
+		ghost.drawGhost(g, g1x, 40, diameter, Color.red);
 		
 	}
 
