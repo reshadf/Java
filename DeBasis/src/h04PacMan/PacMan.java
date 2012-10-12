@@ -14,12 +14,12 @@ public class PacMan extends JPanel implements ActionListener {
 	
 	private int horizontalePlaats = 250; // x location
 	private int verticalePlaats = 150; // y location
-	private int richtingEnSnelheid = +10; // speed
+	private int richtingEnSnelheid = 10; // speed
 	private final int WACHTTIJD = 500; // DELAY
 	int diameter; //radius of pacman
 	int direction; // view of pacman
 	int waarde; //direction pacman is going
-	final int ghostSpeed = 5; // speed of ghost
+	final int ghostSpeed = 10; // speed of ghost
 
 	public PacMan() {
 		
