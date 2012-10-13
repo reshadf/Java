@@ -13,7 +13,6 @@ public class Worp extends JPanel implements ActionListener {
 		
 		this.dobbelsteen = dobbelsteen;
 		
-		dobbelsteen = new DobbelSteen();
 		worp = new JButton("Werp de dobbelsteen");
 		worp.addActionListener(this);
 		
