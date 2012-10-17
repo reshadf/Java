@@ -87,7 +87,7 @@ public class GetalConverter extends JPanel implements ActionListener {
 	      kleinVal = invoerWaarde - (grootVal * 10);
 	      try{
 	    	  if(invoerWaarde < 20){
-	    		  valueString = klein[kleinVal] + "";
+	    		  valueString = klein[kleinVal] + "" + groot[grootVal];
 	    	  }
 	    	  else {
 	    		  valueString = klein[kleinVal] + "en" + groot[grootVal];  
