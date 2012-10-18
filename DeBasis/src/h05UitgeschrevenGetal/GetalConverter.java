@@ -54,6 +54,7 @@ public class GetalConverter extends JPanel implements ActionListener {
 		klein[18] = "achtien";
 		klein[19] = "negentien";
 		
+		groot[0] = "";
 		groot[1] = "tien";
 		groot[2] = "twintig";
 		groot[3] = "dertig";
@@ -90,11 +91,17 @@ public class GetalConverter extends JPanel implements ActionListener {
 	    		  valueString = klein[kleinVal] + "" + groot[grootVal];
 	    	  }
 	    	  else {
-	    		  valueString = klein[kleinVal] + "en" + groot[grootVal];  
+	    		  
+	    		  if(invoerWaarde == 10 || invoerWaarde == 20 || invoerWaarde == 30 || invoerWaarde == 40 || invoerWaarde == 50 || invoerWaarde == 60 || invoerWaarde == 70 || invoerWaarde == 80 || invoerWaarde == 90) {
+	    			  valueString = " " + groot[grootVal];
+	    		  }
+	    		  else {
+	    			  valueString = klein[kleinVal] + "en" + groot[grootVal];
+	    		  }
+	    		   
 	    	  }
 	    	  
 	    	  convertedVal = valueString;
-	    	  
 	      }
 	      catch(ArrayIndexOutOfBoundsException err){
 	          System.out.println("Error 1");
