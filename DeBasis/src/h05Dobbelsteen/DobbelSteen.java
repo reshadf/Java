@@ -11,8 +11,6 @@ public class DobbelSteen extends JPanel {
 
 	public DobbelSteen() {
 		
-		//roll();
-		
 	}
 	
 	/*
