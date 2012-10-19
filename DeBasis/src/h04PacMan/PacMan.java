@@ -6,7 +6,7 @@ package h04PacMan;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.util.ArrayList;
+import java.util.*;
 
 import javax.swing.*;
 
@@ -116,11 +116,38 @@ public class PacMan extends JPanel implements ActionListener {
 		
 	}
 	
+	
 	DrawPacMan pacman = new DrawPacMan();
 	DrawGhost ghost = new DrawGhost();
 	
-	int g1x = 0;
+	int g1x = 50;
 	boolean g1r = true;
+	
+	/*
+	 * Direction van ghost bepalen
+	 */
+	 
+	 public void moveUp() {
+		 
+	 }
+	 
+	 public void moveLeft() {
+		 
+		 if (g1x >= 500) { g1x = 500; g1r = false; }
+		 else if (g1x <= 0) { g1x = 0; g1r = true; }
+		
+	 }
+	 
+	 public void moveRight() {
+		 
+		 if (g1x >= 500) { g1x = 500; g1r = false; }
+		 else if (g1x <= 0) { g1x = 0; g1r = true; }
+		 
+	 }
+	 
+	 public void moveDown() {
+		 
+	 }
 	
 	public void paintComponent(Graphics g) {
 		
@@ -130,13 +157,32 @@ public class PacMan extends JPanel implements ActionListener {
 		pacman.drawPacMan(g, getHorPlaats(), getVerPlaats(), diameter, getView(), Color.yellow);
 		
 		// ghosts movement
-		g1x += ghostSpeed * (g1r? 1 : -1);
+		g1x += ghostSpeed * (Math.random() > 0.5? 1 : -1); // random direction
 		
-		// check direction
-		if (g1x >= 500) { g1x = 500; g1r = false; }
-		else if (g1x <= 0) { g1x = 0; g1r = true; }
+		 Random randomGen = new Random();
+		 // generate a random number, between 0 - 3
+		 int randomize = randomGen.nextInt(4);
 		
-		ghost.drawGhost(g, g1x, 40, diameter, Color.red);
+		switch(randomize) {
+		 case 0:
+			 moveUp();
+			 System.out.println("up");
+			 break;
+		 case 1:
+			 moveLeft();
+			 System.out.println("Left");
+			 break;
+		 case 2:
+			 moveRight();
+			 System.out.println("Right");
+			 break;
+		 case 3:
+			 moveDown();
+			 System.out.println("down");
+			 break;
+		}
+		
+		ghost.drawGhost(g, randomize, 40, diameter, Color.red);
 		
 	}
 
