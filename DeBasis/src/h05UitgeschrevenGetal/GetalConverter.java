@@ -78,8 +78,8 @@ public class GetalConverter extends JPanel implements ActionListener {
 		
 	}
 	
-	public void Convert()
-	{
+	public void Convert() {
+		
 	   int grootVal, kleinVal;
 	   String valueString;
 	   if(invoerWaarde < 100){
@@ -93,7 +93,7 @@ public class GetalConverter extends JPanel implements ActionListener {
 	    	  else {
 	    		  
 	    		  if(invoerWaarde == 10 || invoerWaarde == 20 || invoerWaarde == 30 || invoerWaarde == 40 || invoerWaarde == 50 || invoerWaarde == 60 || invoerWaarde == 70 || invoerWaarde == 80 || invoerWaarde == 90) {
-	    			  valueString = " " + groot[grootVal];
+	    			  valueString = groot[grootVal];
 	    		  }
 	    		  else {
 	    			  valueString = klein[kleinVal] + "en" + groot[grootVal];
