@@ -1,6 +1,6 @@
 package proeftoets;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
@@ -13,7 +13,7 @@ public class VierkantTimerApp extends JFrame implements ActionListener {
 	
 	public VierkantTimerApp() {
 		
-		setSize(300, 100);
+		setSize(300, 200);
 		setTitle("Spelen met vierkanten");
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,13 +28,17 @@ public class VierkantTimerApp extends JFrame implements ActionListener {
 		naarBovenButton.addActionListener(this);
 		naarBenedenButton.addActionListener(this);
 		
+		mijnPaneel = new VierkantPaneel();
 		add(linkerButton, BorderLayout.WEST);
 		add(naarBovenButton, BorderLayout.NORTH);
 		add(rechterButton, BorderLayout.EAST);
-		add(naarBenedenButton, BorderLayout.SOUTH);
-		
+		add(naarBenedenButton, BorderLayout.SOUTH);		
 		add(mijnPaneel, BorderLayout.CENTER);
 		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new VierkantTimerApp();
 	}
 	
 	public void actionPerformed(ActionEvent ae) {
@@ -51,12 +55,6 @@ public class VierkantTimerApp extends JFrame implements ActionListener {
 		if(ae.getSource() == naarBenedenButton) {
 			mijnPaneel.setRichting(4);
 		}
-	}
-	
-	public static void main(String[] args) {
-		
-		new VierkantTimerApp();
-
 	}
 
 }
