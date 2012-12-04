@@ -1,7 +1,6 @@
 package h05UitgeschrevenGetal;
 
 import java.awt.event.*;
-import java.util.regex.*;
 
 import javax.swing.*;
 
