@@ -34,27 +34,6 @@ public class TekenRegenboog extends JPanel {
 			
 		}
 	}
-	
-//	public void setHoogte(int HoogteLijn) {
-//		
-//		for(int yPos = 0; yPos < HoogteLijn; yPos += 10) {
-//			
-//			HoogteLijn += yPos;
-//			System.out.println("test");
-//			
-//		}
-//		
-//		System.out.println("lijnhoogte" + HoogteLijn);
-//		hoogte = HoogteLijn;
-//		
-//	}
-//	
-//	public int getHoogte() {
-//		
-//		System.out.println("hoogte " + hoogte);
-//		return hoogte;
-//		
-//	}
 
 	public void setBreedte_Rechthoek(int inPut) {
 		
