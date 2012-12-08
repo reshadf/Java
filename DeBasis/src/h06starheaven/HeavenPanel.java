@@ -22,6 +22,7 @@ public class HeavenPanel extends JPanel implements MouseWheelListener {
 	
 	ArrayList<Star> stars = new ArrayList<Star>();
 	ArrayList<StarRed> rs = new ArrayList<StarRed>();
+	Random r = new Random();
 	
 	public HeavenPanel() {
 		
@@ -41,8 +42,6 @@ public class HeavenPanel extends JPanel implements MouseWheelListener {
 		
 	}
 	
-	
-	Random r = new Random();
 	public void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		
@@ -65,6 +64,9 @@ public class HeavenPanel extends JPanel implements MouseWheelListener {
 		
 		for(StarRed s: rs) {
 			s.r += e.getWheelRotation();
+			if(s.r > 0 && s.r < 255) {
+				s.color = new Color(s.r, 0, 0);
+			}
 		}
 		repaint();
 	}

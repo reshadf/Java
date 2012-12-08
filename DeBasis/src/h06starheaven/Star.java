@@ -40,12 +40,7 @@ public class Star {
 		if(ymiddelpunt < radius) {
 			ymiddelpunt += radius;
 		}
-		if(radius > 50) {
-			radius = 50;
-		}
-		if(radius < 10) {
-			radius = 10;
-		}
+
 		
 		Point p1 = new Point(xmiddelpunt, ymiddelpunt - radius);
 		Point p2 = new Point(xmiddelpunt - radius / 3, ymiddelpunt - radius / 3);
