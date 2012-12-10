@@ -16,6 +16,7 @@ public class MuseumRegistratie {
 	}
 	
 	public void checkOut(String kaartNummer, int vertrekUur, int VertrekMinuten) {
+
 		bezoeker.remove(kaartNummer);
 	}
 	
@@ -37,7 +38,7 @@ public class MuseumRegistratie {
 		
 		aantalBezoekers = bezoeker.size();
 		
-		if(aantalBezoekers == 0) {
+		if(!(aantalBezoekers >= 0)) {
 			
 			String str = "Gemiddelde tijd bezoekers: " + (gesommeerdeTijd / aantalBezoekers);
 			
