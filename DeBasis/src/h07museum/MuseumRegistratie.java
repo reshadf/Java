@@ -12,11 +12,11 @@ public class MuseumRegistratie {
 	ArrayList<MuseumBezoeker> bezoeker = new ArrayList<MuseumBezoeker>();
 
 	public void checkIn(String kaartNummer, int aankomstUur, int aankomstMinuten) {
-		
+		bezoeker.add(new MuseumBezoeker(kaartNummer, aankomstUur, aankomstMinuten));
 	}
 	
 	public void checkOut(String kaartNummer, int vertrekUur, int VertrekMinuten) {
-		
+		bezoeker.remove(kaartNummer);
 	}
 	
 	public int getAantalAanwezig() {

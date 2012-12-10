@@ -56,11 +56,11 @@ public class MuseumPanel extends JPanel implements ActionListener {
 		minuut.setText("" + minute);
 		// aankomst
 		if(e.getSource() == aankomst) {
-			museum.checkIn(kaartnummer.getText(), Integer.parseInt(uur.getText()), Integer.parseInt(minuut.getText()));
+			museum.checkIn(kaartnummer.getText(), hour, minute);
 		}
 		// vertrek
 		if(e.getSource() == vertrek) {
-			museum.checkOut(kaartnummer.getText(), Integer.parseInt(uur.getText()), Integer.parseInt(minuut.getText()));
+			museum.checkOut(kaartnummer.getText(), hour, minute);
 		}
 		// overzicht
 		if(e.getSource() == overzicht) {

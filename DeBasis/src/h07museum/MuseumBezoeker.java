@@ -2,7 +2,7 @@ package h07museum;
 
 public class MuseumBezoeker {
 
-	String kaartNummer;
+	private String kaartNummer;
 	private int aankomstUur;
 	private int aankomstMinuten;
 	
