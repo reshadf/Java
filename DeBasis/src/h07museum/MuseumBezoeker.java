@@ -18,7 +18,8 @@ public class MuseumBezoeker {
 	
 	public int berekenAanwezigheid(int vertrekUur, int vertrekMinuten) {
 		
-		int tijd = (vertrekUur - aankomstUur) + (vertrekMinuten - aankomstMinuten);
+		int remainingTime = ((vertrekUur * 60) + vertrekMinuten ) - ((aankomstUur * 60) + aankomstMinuten);
+		int tijd = remainingTime / 60 + remainingTime % 60;
 		
 		return tijd;
 	}

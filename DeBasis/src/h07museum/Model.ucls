@@ -2,7 +2,7 @@
   associations="true" dependencies="false" nesting-relationships="true">  
   <class id="1" corner="BOTTOM_RIGHT" language="java" name="h07museum.MuseumPanel" project="DeBasis" 
     file="/DeBasis/src/h07museum/MuseumPanel.java" binary="false">    
-    <position height="-1" width="-1" x="141" y="142"/>    
+    <position height="-1" width="-1" x="115" y="136"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -10,7 +10,7 @@
   </class>  
   <class id="2" corner="BOTTOM_RIGHT" language="java" name="h07museum.MuseumBezoeker" project="DeBasis" 
     file="/DeBasis/src/h07museum/MuseumBezoeker.java" binary="false">    
-    <position height="-1" width="-1" x="132" y="416"/>    
+    <position height="-1" width="-1" x="609" y="103"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -18,7 +18,7 @@
   </class>  
   <class id="3" corner="BOTTOM_RIGHT" language="java" name="h07museum.MuseumRegistratie" project="DeBasis" 
     file="/DeBasis/src/h07museum/MuseumRegistratie.java" binary="false">    
-    <position height="-1" width="-1" x="381" y="300"/>    
+    <position height="-1" width="-1" x="385" y="309"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
@@ -26,7 +26,7 @@
   </class>  
   <class id="4" corner="BOTTOM_RIGHT" language="java" name="h07museum.MuseumApp" project="DeBasis" 
     file="/DeBasis/src/h07museum/MuseumApp.java" binary="false">    
-    <position height="-1" width="-1" x="351" y="65"/>    
+    <position height="-1" width="-1" x="325" y="59"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true"/>      
       <operations public="true" package="true" protected="true" private="true"/>    
