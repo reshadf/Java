@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class MuseumRegistratie {
 	
 	int gesommeerdeTijd;
-	int aantalBezoekers;
+	int aantalBezoekers = 0;
 	
 	ArrayList<MuseumBezoeker> bezoeker = new ArrayList<MuseumBezoeker>();
 
@@ -16,33 +16,25 @@ public class MuseumRegistratie {
 	}
 	
 	public void checkOut(String kaartNummer, int vertrekUur, int VertrekMinuten) {
-
+		aantalBezoekers++;
 		bezoeker.remove(kaartNummer);
 	}
 	
 	public int getAantalAanwezig() {
-		
-		try {
-			
-			aantalBezoekers = bezoeker.size();
-			
-		} catch (NullPointerException e) {
-			// TODO: handle exception
-			aantalBezoekers = 0;
-		}
-		
-		return aantalBezoekers;
+		return bezoeker.size();
 	}
 	
 	public void sluitRegistratie() {
 		
-		aantalBezoekers = bezoeker.size();
-		
-		if(!(aantalBezoekers >= 0)) {
+		if(bezoeker.isEmpty()) {
 			
-			String str = "Gemiddelde tijd bezoekers: " + (gesommeerdeTijd / aantalBezoekers);
+			try {
+				String str = "Gemiddelde tijd bezoekers: " + (gesommeerdeTijd / aantalBezoekers);
+				JOptionPane.showMessageDialog(null, str);
+			} catch (ArithmeticException ax) {
+				JOptionPane.showMessageDialog(null, "er zijn geen bezoekers geweest");
+			}
 			
-			JOptionPane.showMessageDialog(null, str);
 		}
 		else {
 			JOptionPane.showMessageDialog(null, "Bezoekers zijn nog niet weg");

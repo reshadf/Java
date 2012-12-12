@@ -61,7 +61,6 @@ public class MuseumPanel extends JPanel implements ActionListener {
 		// aankomst
 		if(e.getSource() == aankomst) {
 			try {
-				
 				museum.checkIn(kaartnummer.getText(), hour, minute);
 			} catch (NullPointerException ex) {
 				
