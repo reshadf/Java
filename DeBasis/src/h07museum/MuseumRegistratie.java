@@ -15,9 +15,16 @@ public class MuseumRegistratie {
 		bezoeker.add(new MuseumBezoeker(kaartNummer, aankomstUur, aankomstMinuten));
 	}
 	
-	public void checkOut(String kaartNummer, int vertrekUur, int VertrekMinuten) {
+	public void checkOut(String kaartNummer, int vertrekUur, int vertrekMinuten) {
 		aantalBezoekers++;
-		bezoeker.remove(kaartNummer);
+		
+		for(int i = 0; i < bezoeker.size(); i++) {
+			if(bezoeker.get(i).getKaartNummer().equals(kaartNummer)) {
+				
+				gesommeerdeTijd += bezoeker.get(i).berekenAanwezigheid(vertrekUur, vertrekMinuten);
+				bezoeker.remove(i);
+			}
+		}
 	}
 	
 	public int getAantalAanwezig() {
@@ -31,7 +38,7 @@ public class MuseumRegistratie {
 			try {
 				String str = "Gemiddelde tijd bezoekers: " + (gesommeerdeTijd / aantalBezoekers);
 				JOptionPane.showMessageDialog(null, str);
-			} catch (ArithmeticException ax) {
+			} catch (ArithmeticException ae) {
 				JOptionPane.showMessageDialog(null, "er zijn geen bezoekers geweest");
 			}
 			

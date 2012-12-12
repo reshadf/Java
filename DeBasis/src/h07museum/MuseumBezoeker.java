@@ -12,6 +12,10 @@ public class MuseumBezoeker {
 		this.aankomstMinuten = aankomstMinuten;
 	}
 	
+	public String getKaartNummer() {
+		return kaartNummer;
+	}
+	
 	public int berekenAanwezigheid(int vertrekUur, int vertrekMinuten) {
 		
 		int tijd = (vertrekUur - aankomstUur) + (vertrekMinuten - aankomstMinuten);
