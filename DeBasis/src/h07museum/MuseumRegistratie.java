@@ -6,10 +6,9 @@ import javax.swing.JOptionPane;
 
 public class MuseumRegistratie {
 	
-	int gesommeerdeTijd;
-	int aantalBezoekers = 0;
-	
-	ArrayList<MuseumBezoeker> bezoeker = new ArrayList<MuseumBezoeker>();
+	private int gesommeerdeTijd;
+	private int aantalBezoekers = 0;
+	private ArrayList<MuseumBezoeker> bezoeker = new ArrayList<MuseumBezoeker>();
 
 	public void checkIn(String kaartNummer, int aankomstUur, int aankomstMinuten) {
 		bezoeker.add(new MuseumBezoeker(kaartNummer, aankomstUur, aankomstMinuten));

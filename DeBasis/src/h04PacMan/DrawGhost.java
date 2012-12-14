@@ -20,7 +20,7 @@ public class DrawGhost {
 		g.fillRect(x, y + radius / 2, radius, radius / 2);
 
 		// ghost eyes
-		g.setColor(color.black);
+		g.setColor(color.BLACK);
 		g.fillOval(x + radius / 4 ,y + radius / 4 , radius / 5, radius / 5); // drawing eye;
 		g.setColor(Color.black);
 		g.fillOval(x + radius / 4 + (radius / 4) ,y + radius / 4 , radius / 5, radius / 5); // drawing eye;
