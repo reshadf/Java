@@ -25,6 +25,9 @@ public class DrawingPanel extends JPanel implements MouseListener {
 		draw.draw(g);
 		for(Drawing draw : tekening) {
 			draw.draw(g);
+			if(tekening.size() >= 2) {
+				draw.line(g);
+			}
 		}
 		repaint();
 	}
@@ -51,15 +54,21 @@ public class DrawingPanel extends JPanel implements MouseListener {
 	}
 
 	@Override
-	public void mouseExited(MouseEvent e) {	
+	public void mouseExited(MouseEvent e) {
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
+		Point k = new Point(e.getX(), e.getY());
+		draw.addPoint(k);
+		System.out.println("startpunt");
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
+		Point k = new Point(e.getX(), e.getY());
+		draw.addPoint(k);
+		System.out.println("eindpunt");
 	}
 
 }

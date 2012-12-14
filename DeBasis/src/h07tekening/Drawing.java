@@ -30,5 +30,12 @@ public class Drawing {
 			g.fillRect(p.get(i).x, p.get(i).y, 10, 10);
 		}
 	}
+	
+	public void line(Graphics g) {
+		for(int j = 0; j < p.size(); j++) {
+			g.setColor(color);
+			g.drawLine(p.get(j).x, p.get(j).y, p.get(j + 1).x, p.get(j + 1).y);
+		}
+	}
 
 }
