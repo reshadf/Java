@@ -25,7 +25,7 @@ public class DrawingPanel extends JPanel implements MouseListener {
 		draw.draw(g);
 		for(Drawing draw : tekening) {
 			draw.draw(g);
-			if(tekening.size() >= 2) {
+			if(tekening.size() >= 1) {
 				draw.line(g);
 			}
 		}
