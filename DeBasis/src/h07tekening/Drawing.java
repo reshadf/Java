@@ -32,9 +32,9 @@ public class Drawing {
 	}
 	
 	public void line(Graphics g) {
-		for(int j = 0; j < p.size(); j++) {
+		for(int j = 1; j < p.size(); j++) {
 			g.setColor(color);
-			g.drawLine(p.get(j).x, p.get(j).y, p.get(j + 1).x, p.get(j + 1).y);
+			g.drawLine(p.get(j - 1).x, p.get(j - 1).y, p.get(j).x, p.get(j).y);
 		}
 	}
 
