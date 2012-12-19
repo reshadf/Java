@@ -15,7 +15,7 @@ public class DrawingPanel extends JPanel implements MouseListener {
 	private ArrayList<Drawing> tekening = new ArrayList<Drawing>();
 	
 	public DrawingPanel() {
-		setBackground(Color.WHITE); // zorg voor een witte achtergrond.
+		setBackground(Color.WHITE); // background
 		this.addMouseListener(this); // control de mouselistener
 		draw = new Drawing(color);
 	}
@@ -38,7 +38,7 @@ public class DrawingPanel extends JPanel implements MouseListener {
 		if(e.getButton() == MouseEvent.BUTTON1) {
 			Point k = new Point(e.getX(), e.getY());
 			draw.addPoint(k);
-			System.out.println("punt gezet op " + k);
+			//System.out.println("punt gezet op " + k);
 		}
 		if(e.getButton() == MouseEvent.BUTTON3) {
 			tekening.add(draw);
@@ -61,14 +61,15 @@ public class DrawingPanel extends JPanel implements MouseListener {
 	public void mousePressed(MouseEvent e) {
 		Point k = new Point(e.getX(), e.getY());
 		draw.addPoint(k);
-		System.out.println("startpunt");
+		//System.out.println("startpunt");
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		Point k = new Point(e.getX(), e.getY());
 		draw.addPoint(k);
-		System.out.println("eindpunt");
+		//tekening.add(draw);
+		//System.out.println("eindpunt");
 	}
 
 }
