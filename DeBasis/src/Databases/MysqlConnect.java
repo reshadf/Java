@@ -24,9 +24,9 @@
 			        int x = rs.getInt("id");
 			        String s = rs.getString("name");
 			        int f = rs.getInt("job_id");
-			        int l = rs.getInt("location");
+			        String l = rs.getString("location");
 			        
-			        System.out.println("" + x + s + f + l);
+			        System.out.println("id: " + x + "\n Name: " + s + "\n Job ID: " + f + "\n Location: " + l);
 			    }
 			}
 		 
