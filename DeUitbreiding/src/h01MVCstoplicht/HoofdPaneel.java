@@ -21,9 +21,9 @@ public class HoofdPaneel extends JFrame {
 		
 		frame.setLayout(new BorderLayout());
 		
-		model = new VerkeersLichtModel();
-		view = new VerkeersLichtView();
-		controller = new VerkeersLichtController();
+		model = new VerkeersLichtModel(rootPaneCheckingEnabled, rootPaneCheckingEnabled, rootPaneCheckingEnabled);
+		view = new VerkeersLichtView(model);
+		controller = new VerkeersLichtController(model, view);
 		
 		frame.add(view, BorderLayout.CENTER);
 		frame.add(controller, BorderLayout.SOUTH);

@@ -1,5 +1,7 @@
 package h01MVCstoplicht;
 
+import java.awt.Color;
+
 public class VerkeersLichtModel {
 
 	private boolean rood, groen, oranje;
@@ -11,15 +13,15 @@ public class VerkeersLichtModel {
 	}
 	
 	public void setRood() {
-		
+		this.rood = true;
 	}
 	
 	public void setGroen() {
-		
+		this.groen = true;
 	}
 	
 	public void setOranje() {
-		
+		this.oranje = true;
 	}
 	
 	public void reset() {
@@ -39,7 +41,5 @@ public class VerkeersLichtModel {
 	public boolean getOranje() {
 		return this.oranje;
 	}
-	
-	
 
 }
