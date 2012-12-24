@@ -43,29 +43,26 @@ public class BestandKiezenPanel extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == openKnop) {
-			try {
-				String query = "SELECT id, name, job_id, location FROM person WHERE name = 'Tom Swift'";
 				
-				db.connectToAndQueryDatabase("test", "root", "root");
-				
-				try {
-					Statement stmt = db.createStatement();
-					ResultSet rs = stmt.executeQuery(query);
-				} catch (SQLException e2) {
-					e2.printStackTrace();
+				 try {
+					 String query = "SELECT id, name, job_id, location FROM person WHERE name = 'Tom Swift'";
+					 
+					db.connectToAndQueryDatabase("test", "root", "root");
+					
+					System.out.println("connectie tot stand gebracht");
+					
+				} catch (SQLException e1) {
+					e1.printStackTrace();
 				}
-				
-				db.closeCon();
-				
-			} catch (SQLException sqlE) {
-
-				System.out.println("fout met query");
-				sqlE.printStackTrace();
-			}
+				 finally {
+					 db.closeCon();
+						System.out.println("connectie gesloten");
+				 }
 		}
 		else {
 		
 		}
+	
 	}
 
 }

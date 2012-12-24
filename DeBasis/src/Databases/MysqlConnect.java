@@ -12,10 +12,10 @@ import javax.sql.*;
 	
 	public class MysqlConnect{
 		
-		 private Connection con = null;
+		protected Connection con;
 
 		public void connectToAndQueryDatabase(String database, String username, String password) throws SQLException {
-
+			con = null;
 				try {
 					con = DriverManager.getConnection(
 					                     "jdbc:mysql://localhost:3306/" + database,
