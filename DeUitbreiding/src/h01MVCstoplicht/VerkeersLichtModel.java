@@ -1,7 +1,5 @@
 package h01MVCstoplicht;
 
-import java.awt.Color;
-
 public class VerkeersLichtModel {
 
 	private boolean rood, groen, oranje;
