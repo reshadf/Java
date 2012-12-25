@@ -1,11 +1,12 @@
 package BestandKiezen;
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.*;
+import javax.sql.*;
 
 import Databases.MysqlConnect;
 
@@ -43,26 +44,47 @@ public class BestandKiezenPanel extends JPanel implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource() == openKnop) {
-				
+				Connection con = null;
+				Statement st = null;
+				ResultSet rs = null;
 				 try {
-					 String query = "SELECT id, name, job_id, location FROM person WHERE name = 'Tom Swift'";
 					 
-					db.connectToAndQueryDatabase("test", "root", "root");
+					con = db.connectToAndQueryDatabase("test", "root", "root");
+					System.out.println("connection established");
 					
-					System.out.println("connectie tot stand gebracht");
+					st = con.createStatement();
+					String query = "SELECT id, name, job_id, location FROM person";
+					rs = st.executeQuery(query);
+					
+					while(rs.next()) {
+						System.out.println(rs.getString("name"));
+					}
+					
+					
+					System.out.println("Selected query succesfull");
+					
 					
 				} catch (SQLException e1) {
 					e1.printStackTrace();
 				}
 				 finally {
-					 db.closeCon();
-						System.out.println("connectie gesloten");
+					 	if (rs != null) {
+					        try {
+					            rs.close();
+					        } catch (SQLException e2) { /* ignored */}
+					    }
+					    if (st != null) {
+					        try {
+					            st.close();
+					        } catch (SQLException e2) { /* ignored */}
+					    }					    
+					    if (con != null) {
+					        try {
+					            con.close();
+					        } catch (SQLException e2) { /* ignored */}
+					    }
+						System.out.println("connection closed");
 				 }
 		}
-		else {
-		
-		}
-	
 	}
-
 }

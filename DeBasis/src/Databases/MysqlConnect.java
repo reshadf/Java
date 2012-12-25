@@ -11,11 +11,9 @@ import javax.sql.*;
 	 */
 	
 	public class MysqlConnect{
-		
-		protected Connection con;
 
-		public void connectToAndQueryDatabase(String database, String username, String password) throws SQLException {
-			con = null;
+		public Connection connectToAndQueryDatabase(String database, String username, String password) throws SQLException {
+			Connection con = null;
 				try {
 					con = DriverManager.getConnection(
 					                     "jdbc:mysql://localhost:3306/" + database,
@@ -24,9 +22,8 @@ import javax.sql.*;
 				} catch (SQLException e) {
 					e.printStackTrace();
 				}
+				
+				return con;
 		}
 		
-		public void closeCon() {
-			con = null;
-		}
 	}
