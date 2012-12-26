@@ -57,7 +57,7 @@ public class BestandKiezenPanel extends JPanel implements ActionListener {
 					rs = st.executeQuery(query);
 					
 					while(rs.next()) {
-						System.out.println(rs.getString("name"));
+						System.out.println(rs.getString("name") + "\n" + rs.getString("location"));
 					}
 					
 					
