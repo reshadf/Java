@@ -1,6 +1,7 @@
 package toDoList;
 
 import java.sql.*;
+import java.util.*;
 
 import Databases.MysqlConnect;
 
@@ -10,6 +11,8 @@ public class ToDoListModel {
 	
 	private String value;
 	private ToDoListView view;
+	
+	private Vector<String> rijen = new Vector<String>();
 
 	public ToDoListModel(ToDoListView view) {
 		this.view = view;
@@ -30,7 +33,9 @@ public class ToDoListModel {
 			
 			while(rs.next()) {
 				System.out.println(rs.getInt("id") + "\n" + rs.getString("item") + "\n" + rs.getDate("datum"));
-				
+				rijen.add(rs.getInt("id") + "");
+				rijen.add(rs.getString("item"));
+				rijen.add(rs.getDate("datum") + "");
 			}
 			
 			
@@ -58,6 +63,10 @@ public class ToDoListModel {
 			    }
 				System.out.println("connection closed");
 		 }
+	}
+	
+	public Vector<String> getRows() {
+		return rijen;
 	}
 	
 	public void insertValue(String value) {
