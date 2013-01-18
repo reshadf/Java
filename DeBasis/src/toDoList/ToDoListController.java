@@ -8,7 +8,7 @@ import javax.swing.*;
 public class ToDoListController extends JPanel implements ActionListener {
 	
 	private JTextField toDo;
-	private JButton add;
+	private JButton addItem;
 	
 	private ToDoListModel model;
 	private ToDoListView view;
@@ -23,20 +23,24 @@ public class ToDoListController extends JPanel implements ActionListener {
 		toDo.addActionListener(this);
 		add(toDo);
 		
-		add = new JButton("voeg toe");
-		add.addActionListener(this);
-		add(add);
+		addItem = new JButton("voeg toe");
+		addItem.addActionListener(this);
+		add(addItem);
 		
 		model.getValue();
+		view.createTable();
 		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		if(e.getSource() == add) {
+		if(e.getSource() == addItem) {
 			model.insertValue(toDo.getText());
 			model.getValue();
+			toDo.setText("");
+
 		}
+		
 	}
 }

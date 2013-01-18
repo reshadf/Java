@@ -10,28 +10,49 @@ public class ToDoListView extends JPanel {
 
 	private ToDoListModel model;
 	
-	JTable table = null;
+	protected JTable table;
+	protected DefaultTableModel tableModel;
 	
 	public ToDoListView(ToDoListModel model) {
 		this.model = model;
 		
 		setBackground(Color.WHITE);
 		
-		JTable table = new JTable();
+		this.setLayout(new BorderLayout());
 		
-		DefaultTableModel tableModel = new DefaultTableModel(new Object[][]{},new String[]{"To do","Date added"});
-    
-        table.setModel(tableModel);
-        
-        tableModel.addRow(new Object[]{"something","1-1-2012"});
-        
-        for(int i = 0; i < model.getRows().size(); i++) {
-        	
-        		tableModel.addRow(model.getRows().get(i));
-        }
-        
-        add(table);
+		
 		
 	}
-
+	
+	public void createTable() {
+		
+		table = new JTable();
+		
+		tableModel = new DefaultTableModel(new Object[][]{},new String[]{"To do","Date added", "Modify"});
+    
+		table.setSize(450, 600);
+	
+		
+        table.setModel(tableModel);
+        JScrollPane scrlPan=new JScrollPane(table);
+        
+        for(int i = 0; i < model.getId().size(); i++) {
+        	
+    		tableModel.addRow(new Object[]{
+    				model.getItem().get(i), 
+    				model.getDate().get(i), 
+    				model.getId().get(i)
+    				});
+        }
+        
+        add(scrlPan);
+        add(table.getTableHeader(), BorderLayout.NORTH);
+        add(table, BorderLayout.CENTER);
+	}
+		
+	public void paintComponent(Graphics g){
+		super.paintComponent(g);
+		table.repaint();
+	}
+	
 }
