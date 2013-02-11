@@ -31,10 +31,11 @@ public class ToDoListView extends JPanel {
 		tableModel = new DefaultTableModel(new Object[][]{},new String[]{"To do","Date added", "Modify"});
     
 		table.setSize(450, 600);
-	
+		
+		JScrollPane scrollPane = new JScrollPane(table);
+		this.add(scrollPane);
 		
         table.setModel(tableModel);
-        JScrollPane scrlPan=new JScrollPane(table);
         
         for(int i = 0; i < model.getId().size(); i++) {
         	
@@ -45,14 +46,14 @@ public class ToDoListView extends JPanel {
     				});
         }
         
-        add(scrlPan);
         add(table.getTableHeader(), BorderLayout.NORTH);
         add(table, BorderLayout.CENTER);
 	}
 		
-	public void paintComponent(Graphics g){
-		super.paintComponent(g);
-		table.repaint();
+	public void deleteTable() {
+		remove(table);
+		table = null;
+		tableModel = null;
 	}
 	
 }
