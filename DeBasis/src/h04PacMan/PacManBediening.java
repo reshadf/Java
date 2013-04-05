@@ -19,6 +19,7 @@ public class PacManBediening extends JPanel implements ActionListener, KeyListen
 		
 		this.pacman = pacman;
 		this.setFocusable(true);
+		requestFocus();
 		this.addKeyListener(this);
 		
 		links = new JButton("<");
