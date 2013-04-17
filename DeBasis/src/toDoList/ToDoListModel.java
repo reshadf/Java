@@ -10,7 +10,9 @@ public class ToDoListModel {
 	
 	MysqlConnect db = new MysqlConnect();
 	
+	@SuppressWarnings("unused")
 	private String value;
+	@SuppressWarnings("unused")
 	private ToDoListView view;
 	
 	private ArrayList<Integer> id = new ArrayList<Integer>();

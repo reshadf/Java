@@ -1,8 +1,6 @@
 package toDoList;
 
 import java.awt.*;
-import java.util.*;
-
 import javax.swing.*;
 import javax.swing.table.*;
 
