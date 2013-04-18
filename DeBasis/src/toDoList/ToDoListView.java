@@ -47,11 +47,5 @@ public class ToDoListView extends JPanel {
         add(table.getTableHeader(), BorderLayout.NORTH);
         add(table, BorderLayout.CENTER);
 	}
-		
-	public void deleteTable() {
-		remove(table);
-		table = null;
-		tableModel = null;
-	}
 	
 }
