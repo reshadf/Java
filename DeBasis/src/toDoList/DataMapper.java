@@ -12,12 +12,14 @@ import Databases.MysqlConnect;
 public class DataMapper {
 
 	MysqlConnect db = new MysqlConnect();
-	String query;
 	private final String database = "toDo", user = "root", password = "";
 	
 	private ArrayList<Integer> id = new ArrayList<Integer>();
 	private ArrayList<String> item = new ArrayList<String>();
 	private ArrayList<Date> datum = new ArrayList<Date>();
+	private String value;
+	private String query;
+	private int itemId;
 
 	
 	public DataMapper() {
@@ -36,7 +38,33 @@ public class DataMapper {
 		return datum;
 	}
 	
-	public void executeQuery(String query) {
+	public Object getAll() {
+		
+		String selectQuery = "SELECT id, item, datum FROM toDoList";
+		
+		return this.executeQuery(selectQuery);
+		
+	}
+	
+	public Object insertItem(String value) {
+		
+		this.value = value;
+		
+		String insertQuery = "INSERT INTO toDoList(item,datum) " + "VALUES ('" + value + "', CURDATE())";
+		
+		return this.executeQuery(insertQuery);
+	}
+	
+	public Object removeItem(int id) {
+		
+		this.itemId = id;
+		String deleteQuery = "DELETE FROM test WHERE id ='" + itemId + "'";
+		
+		return this.executeQuery(deleteQuery);
+		
+	}
+	
+	public Object executeQuery(String query) {
 		
 		this.query = query;
 		Connection con = null;
@@ -48,7 +76,6 @@ public class DataMapper {
 			
 			st = con.createStatement();
 			st.executeUpdate(query);
-			
 		} 
 		catch (SQLException e1) {
 			e1.printStackTrace();
@@ -71,6 +98,7 @@ public class DataMapper {
 			    }
 				System.out.println("connection closed");
 		 }
+		return rs;
 	}
 
 }

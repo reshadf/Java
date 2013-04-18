@@ -26,7 +26,7 @@ public class ToDoListView extends JPanel {
 		
 		table = new JTable();
 		
-		tableModel = new DefaultTableModel(new Object[][]{},new String[]{"To do","Date added", "Modify"});
+		tableModel = new DefaultTableModel(new Object[][]{},new String[]{"To do","Date added", "ID"});
     
 		table.setSize(450, 600);
 		
