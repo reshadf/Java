@@ -41,7 +41,7 @@ public class ToDoListModel {
 		ResultSet rs = null;
 		 try {
 			 
-			con = db.connectToAndQueryDatabase("toDo", "root", "root");
+			con = db.connectToAndQueryDatabase("toDo", "root", "");
 			
 			st = con.createStatement();
 			String query = "SELECT id, item, datum FROM toDoList";
@@ -89,7 +89,7 @@ public class ToDoListModel {
 		ResultSet rs = null;
 		 try {
 			 
-			con = db.connectToAndQueryDatabase("toDo", "root", "root");
+			con = db.connectToAndQueryDatabase("toDo", "root", "");
 			System.out.println("connection established");
 			
 			st = con.createStatement();
@@ -130,7 +130,7 @@ public class ToDoListModel {
 		ResultSet rs = null;
 		 try {
 			 
-			con = db.connectToAndQueryDatabase("toDo", "root", "root");
+			con = db.connectToAndQueryDatabase("toDo", "root", "");
 			System.out.println("connection established");
 			
 			st = con.createStatement();
