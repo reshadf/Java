@@ -27,7 +27,7 @@ public class ToDoListController extends JPanel implements ActionListener {
 		addItem.addActionListener(this);
 		add(addItem);
 		
-		model.getValue();
+		model.getItem();
 		view.createTable();
 		
 	}
@@ -37,8 +37,8 @@ public class ToDoListController extends JPanel implements ActionListener {
 		
 		if(e.getSource() == addItem) {
 			view.deleteTable();
-			model.insertValue(toDo.getText());
-			model.getValue();
+			model.setItem(toDo.getText());
+			model.getItem();
 			toDo.setText("");
 			view.createTable();
 			view.revalidate();

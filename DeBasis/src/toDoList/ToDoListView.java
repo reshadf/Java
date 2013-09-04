@@ -39,7 +39,7 @@ public class ToDoListView extends JPanel {
         	
     		tableModel.addRow(new Object[]{
     				model.getItem().get(i), 
-    				model.getDate().get(i), 
+    				model.getDatum().get(i), 
     				model.getId().get(i)
     				});
         }
@@ -48,4 +48,9 @@ public class ToDoListView extends JPanel {
         add(table, BorderLayout.CENTER);
 	}
 	
+	 public void deleteTable() {
+		   remove(table);
+		    table = null;
+		    tableModel = null;
+	}
 }
