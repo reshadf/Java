@@ -38,6 +38,13 @@ public class DataMapper {
 		return datum;
 	}
 	
+	public ArrayList<ToDoListModel> getModel() {
+		
+		
+		
+		return null;
+	}
+	
 	public Object getAll() {
 		
 		String selectQuery = "SELECT id, item, datum FROM toDoList";
@@ -64,7 +71,7 @@ public class DataMapper {
 		
 	}
 	
-	public Object executeQuery(String query) {
+	private ResultSet executeQuery(String query) {
 		
 		this.query = query;
 		Connection con = null;
